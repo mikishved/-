@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Защита_КИ", "Защита КИ\Защита_КИ.csproj", "{43478050-A2DA-4CF7-96A3-913F4F503F03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "forPricticepart", "forPricticepart\forPricticepart.csproj", "{D6EAEFB7-E3EC-4E8A-97AE-8790951AFE33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43478050-A2DA-4CF7-96A3-913F4F503F03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43478050-A2DA-4CF7-96A3-913F4F503F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43478050-A2DA-4CF7-96A3-913F4F503F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43478050-A2DA-4CF7-96A3-913F4F503F03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6EAEFB7-E3EC-4E8A-97AE-8790951AFE33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6EAEFB7-E3EC-4E8A-97AE-8790951AFE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6EAEFB7-E3EC-4E8A-97AE-8790951AFE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6EAEFB7-E3EC-4E8A-97AE-8790951AFE33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4411F6E2-B336-4E3F-99EF-BD5D7206E4D6}
+	EndGlobalSection
+EndGlobal
