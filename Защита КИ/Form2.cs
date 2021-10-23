@@ -111,7 +111,52 @@ namespace Защита_КИ
             this.richTextBox1.SelectionStart = 0;
         }
 
+        private void toolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+            this.richTextBox1.Text = "";
+            this.groupBox1.Text = this.toolStripMenuItem9.Text;
+            LoadDoc(AppDomain.CurrentDomain.BaseDirectory + "themes/theme8.docx");
+            this.richTextBox1.SelectionStart = 0;
+        }
 
+        private void toolStripMenuItem10_Click(object sender, EventArgs e)
+        {
+            this.richTextBox1.Text = "";
+            this.groupBox1.Text = this.toolStripMenuItem10.Text;
+            LoadDoc(AppDomain.CurrentDomain.BaseDirectory + "themes/theme9.docx");
+            this.richTextBox1.SelectionStart = 0;
+        }
 
+        private void toolStripMenuItem11_Click(object sender, EventArgs e)
+        {
+            this.richTextBox1.Text = "";
+            this.groupBox1.Text = this.toolStripMenuItem11.Text;
+            LoadDoc(AppDomain.CurrentDomain.BaseDirectory + "themes/theme10.docx");
+            this.richTextBox1.SelectionStart = 0;
+        }
+
+        private void toolStripMenuItem12_Click(object sender, EventArgs e)
+        {
+            this.richTextBox1.Text = "";
+            this.groupBox1.Text = this.toolStripMenuItem12.Text;
+            LoadDoc(AppDomain.CurrentDomain.BaseDirectory + "themes/theme11.docx");
+            this.richTextBox1.SelectionStart = 0;
+        }
+
+        private void toolStripMenuItem13_Click(object sender, EventArgs e)
+        {
+            this.richTextBox1.Text = "";
+            this.groupBox1.Text = this.toolStripMenuItem13.Text;
+            LoadDoc(AppDomain.CurrentDomain.BaseDirectory + "themes/theme12.docx");
+            this.richTextBox1.SelectionStart = 0;
+        }
+
+        private void toolStripMenuItem14_Click(object sender, EventArgs e)
+        {
+            this.richTextBox1.Text = "";
+            this.groupBox1.Text = this.toolStripMenuItem14.Text;
+            LoadDoc(AppDomain.CurrentDomain.BaseDirectory + "themes/theme13.docx");
+            this.richTextBox1.SelectionStart = 0;
+        }
     }
 }
