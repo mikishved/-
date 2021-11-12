@@ -34,7 +34,7 @@ namespace Защита_КИ
             this.textBox1.ReadOnly = true;
         }
 
-        private void yt_Button2_Click(object sender, EventArgs e)
+        private void yt_Button2_Click(object sender, EventArgs e) //второе задание 8 варик
         {
             string password = "";
             string N = this.textBox3.Text;
@@ -61,7 +61,7 @@ namespace Защита_КИ
             this.textBox2.ReadOnly = true;
         }
 
-        private void yt_Button3_Click(object sender, EventArgs e)
+        private void yt_Button3_Click(object sender, EventArgs e) //первое задание 8 варик
         {
             string password = "";
             string passwordSymbols = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*;:'`~=+-/.,()_1234567890йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ";
