@@ -1,4 +1,210 @@
 ﻿using System;
+namespace forPricticepart
+{
+    class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+
+
+
+
+            
+            int coordI_1 = 0, coordJ_1 = 0;
+            int coordI_2 = 0, coordJ_2 = 0;
+            string ruAlph = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ ,";
+            string forCode = "это шифрр";
+            string codedString = "";
+            string engAlph = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            string[,] matrix = new string[5, 7];
+            string keyWord = "архив";
+            keyWord = keyWord.ToUpper();
+            string exeptedAlph = ruAlph;
+            int l = 0;
+            bool isKWUsed = false;
+            //убираем символы из алфавита
+            for (int i = 0; i < keyWord.Length; i++)
+            {
+                for (int j = 0; j < ruAlph.Length; j++)
+                {
+                    if (keyWord[i] == ruAlph[j]) exeptedAlph = exeptedAlph.Replace(ruAlph[j].ToString(), "");
+                }
+            }
+            //заполняем матрицу
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (!isKWUsed)
+                    {
+                        for (int k = 0; k < keyWord.Length; k++)
+                        {
+                            if (k >= 7) { k = 0; i++; }
+                            matrix[i, k] = keyWord[l].ToString();
+                            l++;
+                            j = k;
+                            if (l >= keyWord.Length) break;
+
+                        }
+
+                        isKWUsed = true;
+                        l = 0;
+                        j++;
+                    }
+
+                    if (j > 7) { j = 0; i++; }
+                    if (l < exeptedAlph.Length)
+                    {
+                        matrix[i, j] = Convert.ToString(exeptedAlph[l]);
+                        l++;
+                    }
+
+                }
+
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    Console.Write(matrix[i, j]);
+                }
+                Console.WriteLine();
+            }
+            //делим фразу на биограммы
+            forCode = forCode.ToUpper();
+            string Newstring = "";
+            for (int i = 0; i < forCode.Length; i++)
+            {
+                Newstring += forCode[i];
+                if (i < forCode.Length - 1)
+                    if (forCode[i] == forCode[i + 1]) Newstring += "Х";
+            }
+            char[] charForCode = Newstring.ToCharArray();
+            l = 0;
+            for (int osn = 0; osn < charForCode.Length; osn += 2)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 7; j++)
+                    {
+                        if (charForCode[osn].ToString() == matrix[i, j])
+                        {
+                            coordI_1 = i;
+                            coordJ_1 = j;
+                        }
+                    }
+                }
+
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 7; j++)
+                    {
+                        if (charForCode[osn + 1].ToString() == matrix[i, j])
+                        {
+                            coordI_2 = i;
+                            coordJ_2 = j;
+                        }
+                    }
+                }
+
+                codedString += matrix[coordI_2, coordJ_1].ToString() + matrix[coordI_1, coordJ_2].ToString();
+
+            }
+
+            string decodedString = "";
+            char[] charForDecode = codedString.ToCharArray();
+            l = 0;
+            coordI_1 = 0;
+            coordJ_1 = 0;
+            coordI_2 = 0;
+            coordJ_2 = 0;
+            for (int osn = 0; osn < charForDecode.Length; osn += 2)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 7; j++)
+                    {
+                        if (charForDecode[osn].ToString() == matrix[i, j])
+                        {
+                            coordI_1 = i;
+                            coordJ_1 = j;
+
+                        }
+                    }
+                }
+
+                for (int i = 0; i < 5; i++)
+                {
+                    for (int j = 0; j < 7; j++)
+                    {
+                        if (charForDecode[osn + 1].ToString() == matrix[i, j])
+                        {
+                            coordI_2 = i;
+                            coordJ_2 = j;
+                        }
+                    }
+                }
+
+                decodedString += matrix[coordI_2, coordJ_1].ToString() + matrix[coordI_1, coordJ_2].ToString();
+
+            }
+
+        }
+    }
+}
+
+
+
+
+/*using System;
+using System.Threading;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            int n = Convert.ToInt32(Console.ReadLine());
+            int m = Convert.ToInt32(Console.ReadLine());
+            var array = new char[n, m];
+            a: Console.WriteLine("Введите фразу которую хотите зашифровать\n");
+            string s = Console.ReadLine();
+            Console.WriteLine("\n");
+
+            if (s.Length > 36)
+            {
+                Console.WriteLine("Введенная фраза велика для магичсекого квадрата 5x5, попробуйте снова");
+                Thread.Sleep(3000);
+                goto a;
+            }
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                array[i / m, i % m] = s[i];
+            }
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < m; j++)
+                {
+                    Console.Write("{0}", array[j, i]);
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
+*/
+
+
+
+
+
+/*
+using System;
 using System.Threading;
 
 namespace ConsoleApp1
@@ -65,116 +271,6 @@ namespace ConsoleApp1
         }
     }
 }
-
-
-
-/*using System;
-using System.Threading;
-
-namespace ConsoleApp1
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            
-            int n = Convert.ToInt32(Console.ReadLine());
-            int m = Convert.ToInt32(Console.ReadLine());
-            var array = new char[n, m];
-            a: Console.WriteLine("Введите фразу которую хотите зашифровать\n");
-            string s = Console.ReadLine();
-            Console.WriteLine("\n");
-
-            if (s.Length > 36)
-            {
-                Console.WriteLine("Введенная фраза велика для магичсекого квадрата 5x5, попробуйте снова");
-                Thread.Sleep(3000);
-                goto a;
-            }
-
-            for (int i = 0; i < s.Length; i++)
-            {
-                array[i / m, i % m] = s[i];
-            }
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 0; j < m; j++)
-                {
-                    Console.Write("{0}", array[j, i]);
-                }
-                Console.WriteLine();
-            }
-        }
-    }
-}
-*/
-
-
-
-
-
-/*using System;
-namespace forPricticepart
-{
-    class Program
-    {
-
-
-        static void Main(string[] args)
-        {
-            string ruAlph = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
-
-            string engAlph = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            string[,] matrix = new string[4, 8];
-            string keyWord = "советник";
-            keyWord = keyWord.ToUpper();
-            string exeptedAlph = ruAlph;
-            int l = 0;
-            bool isKWUsed = false;
-
-            for (int i = 0; i < keyWord.Length; i++)
-            {
-                for (int j = 0; j < ruAlph.Length; j++)
-                {
-                    if (keyWord[i] == ruAlph[j]) exeptedAlph = exeptedAlph.Remove(i, 1);
-                }
-            }
-
-
-
-
-            for (int i = 0; i < 4; i++)
-            {
-                for (int j = 0; j < 8; j++)
-                {
-                    if (!isKWUsed)
-                    {
-                        for (int k = 0; k < keyWord.Length; k++)
-                        {
-                            matrix[0, k] = Convert.ToString(Convert.ToChar(keyWord[k]));
-                        }
-                        isKWUsed = true;
-                        j = keyWord.Length;
-                    }
-                    if (l < exeptedAlph.Length-1)
-                    {
-                        matrix[i, j] = Convert.ToString(Convert.ToChar(exeptedAlph[l]));
-                        l++;
-                    }
-                }
-            }
-
-
-
-
-
-
-
-
-        }
-    }
-}
-
 */
 
 

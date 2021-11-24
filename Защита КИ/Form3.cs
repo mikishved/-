@@ -39,6 +39,12 @@ namespace Защита_КИ
             f4.Show();
 
         }
+
+        private void yt_Button1_Click(object sender, EventArgs e)
+        {
+            ЛР_3 lr3 = new ЛР_3();
+            lr3.Show();
+        }
     }
 
 

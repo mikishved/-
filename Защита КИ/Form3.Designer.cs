@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.button1 = new System.Windows.Forms.Button();
             this.LR_1_Button = new yt_DesignUI.yt_Button();
+            this.yt_Button1 = new yt_DesignUI.yt_Button();
             this.SuspendLayout();
             // 
             // button1
@@ -70,12 +71,40 @@
             this.LR_1_Button.UseZoomEffectOnHover = false;
             this.LR_1_Button.Click += new System.EventHandler(this.LR_1_Button_Click);
             // 
+            // yt_Button1
+            // 
+            this.yt_Button1.BackColor = System.Drawing.Color.Tomato;
+            this.yt_Button1.BackColorAdditional = System.Drawing.Color.Gray;
+            this.yt_Button1.BackColorGradientEnabled = false;
+            this.yt_Button1.BackColorGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.yt_Button1.BorderColor = System.Drawing.Color.Tomato;
+            this.yt_Button1.BorderColorEnabled = false;
+            this.yt_Button1.BorderColorOnHover = System.Drawing.Color.Tomato;
+            this.yt_Button1.BorderColorOnHoverEnabled = false;
+            this.yt_Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.yt_Button1.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.yt_Button1.ForeColor = System.Drawing.Color.White;
+            this.yt_Button1.Location = new System.Drawing.Point(298, 12);
+            this.yt_Button1.Name = "yt_Button1";
+            this.yt_Button1.RippleColor = System.Drawing.Color.Black;
+            this.yt_Button1.Rounding = 40;
+            this.yt_Button1.RoundingEnable = true;
+            this.yt_Button1.Size = new System.Drawing.Size(130, 130);
+            this.yt_Button1.TabIndex = 5;
+            this.yt_Button1.Text = "Лабораторная работа №3";
+            this.yt_Button1.TextHover = null;
+            this.yt_Button1.UseDownPressEffectOnClick = false;
+            this.yt_Button1.UseRippleEffect = true;
+            this.yt_Button1.UseZoomEffectOnHover = false;
+            this.yt_Button1.Click += new System.EventHandler(this.yt_Button1_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.yt_Button1);
             this.Controls.Add(this.LR_1_Button);
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -90,5 +119,6 @@
         #endregion
         private System.Windows.Forms.Button button1;
         private yt_DesignUI.yt_Button LR_1_Button;
+        private yt_DesignUI.yt_Button yt_Button1;
     }
 }
