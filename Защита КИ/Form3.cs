@@ -45,6 +45,48 @@ namespace Защита_КИ
             ЛР_3 lr3 = new ЛР_3();
             lr3.Show();
         }
+
+        private void yt_Button2_Click(object sender, EventArgs e)
+        {
+            LR_5 lr5 = new LR_5();
+            lr5.Show();
+        }
+
+        private void lr_2_button_Click(object sender, EventArgs e)
+        {
+            ЛР_2 lr2 = new ЛР_2();
+            lr2.Show();
+        }
+
+        private void yt_Button3_Click(object sender, EventArgs e)
+        {
+            LR_9 lr9 = new LR_9();
+            lr9.Show();
+        }
+
+        private void yt_Button4_Click(object sender, EventArgs e)
+        {
+            LR_4 lr4 = new LR_4();
+            lr4.Show();
+        }
+
+        private void yt_Button5_Click(object sender, EventArgs e)
+        {
+            LR_7 lr7 = new LR_7();
+            lr7.Show();
+        }
+
+        private void yt_Button6_Click(object sender, EventArgs e)
+        {
+            LR_6 lr6 = new LR_6();
+            lr6.Show();
+        }
+
+        private void yt_Button7_Click(object sender, EventArgs e)
+        {
+            LR_10 lr10 = new LR_10();
+            lr10.Show();
+        }
     }
 
 

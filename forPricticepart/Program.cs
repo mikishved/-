@@ -1,17 +1,241 @@
 ﻿using System;
-namespace forPricticepart
+namespace forPricticePart
 {
-    class Program
+    class Prog
     {
-
 
         static void Main(string[] args)
         {
 
 
 
+        }
 
+    }
+}
+
+
+
+
+
+
+
+
+
+/* 1
+ double n = 66, k = 7, s = 20, m = 10, v = 3;
+double t = 70;
+double C = Math.Pow(n, k);
+double t = C / 20;
+t /= 86400;
+t /= 365;
+double T = t * 5 / 3;
+double Tend = T + t;
+*/
+/* 2
+double t = 70;
+t *= 31536000;
+double C = t * s;
+k = Math.Log10(C);
+*/
+/*n = 0;
+t *= 31536000;
+double C = t * s;
+n = Math.Pow(C, 1 / k);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * lr5.1
+using System;
+namespace forPricticepart
+{
+
+    class LetterData
+    {
+        public string letter { get; set; }
+        public int letX { get; set; }
+        public int letY { get; set; }
+
+    }
+
+
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string text = "кабинет";
+            text = text.ToUpper();
+            LetterData[] letter = new LetterData[text.Length];
+            string ruAlph = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ ,.";
+            char[,] alphMatrix = new char[6, 6];
+            int l = 0;
+            int[] letArray = new int[text.Length * 2];
+
+
+            //заполнение матрицы алфавита
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 6; j++)
+                {
+                    alphMatrix[i, j] = ruAlph[l];
+                    l++;
+                }
+            }
+
+            //запись в класс для преобразования координат
+            for (int k = 0; k < letter.Length; k++)
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    for (int j = 0; j < 6; j++)
+                    {
+                        if (text[k] == alphMatrix[i, j])
+                        {
+                            letter[k] = new LetterData();
+                            letter[k].letX = j;
+                            letter[k].letY = i;
+                        }
+                    }
+                }
+            }
+
+
+
+            //шифрование
+            for (int i = 0; i < letArray.Length / 2; i++)
+            {
+                letArray[i] = letter[i].letX;
+            }
+            for (int i = letArray.Length / 2, j = 0; i < letArray.Length; i++, j++)
+            {
+                letArray[i] = letter[j].letY;
+            }
+            LetterData[] codedLetter = new LetterData[text.Length];
+            for (int i = 0,j = 0; i < codedLetter.Length; i++, j+=2)
+            {
+                codedLetter[i] = new LetterData();
+                codedLetter[i].letX = letArray[j];
+                codedLetter[i].letY = letArray[j+1];
+                codedLetter[i].letter = alphMatrix[codedLetter[i].letY, codedLetter[i].letX].ToString();
+            }
+
+            string codedStr = "";
+            for (int i = 0; i < codedLetter.Length; i++)
+            {
+                codedStr += codedLetter[i].letter;
+            }
+
+
+
+            //дешифрование
+            LetterData[] deletter = new LetterData[codedStr.Length];
+            for (int k = 0; k < deletter.Length; k++)
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    for (int j = 0; j < 6; j++)
+                    {
+                        if(codedStr[k]==alphMatrix[i,j])
+                        {
+                            deletter[k] = new LetterData();
+                            deletter[k].letX = j;
+                            deletter[k].letY = i;
+                            goto metka;
+                        }
+                    }
+                }
+            metka:
+                k++;
+                k--;
+            }
+            int[] deletArray = new int[codedStr.Length * 2];
+            for (int i = 0, j = 0; i < deletArray.Length; i+=2, j++)
+            {
+                deletArray[i] = deletter[j].letX;
+                deletArray[i + 1] = deletter[j].letY;
+            }
+            string decodedString = "";
+            for (int i = 0; i < deletArray.Length/2; i++)
+            {
+                decodedString += alphMatrix[deletArray[i + deletArray.Length / 2], deletArray[i]];
+            }
+
+
+        }
+    }
+}
+*/
+//5013251
+//1001203
+
+/*
+            string forCode = "ТЕРМИНАТОР";
+            forCode = forCode.Replace(" ", "");
+            char[,] matrix = new char[5, 7];
+            int l = 0;
             
+            //encrypt
+            for (int i = 0; i < 7; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if (l >= forCode.Length) break;
+                    
+                    matrix[j, i] = forCode[l];
+                    l++;
+                }
+            }
+            string codedStr = "";
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                     
+                    codedStr += matrix[i, j];
+                }
+            }
+            
+            
+            
+            //decrypt
+            l = 0;
+            string decodedStr = "";
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    matrix[i, j] = codedStr[l];
+                    l++;
+                }
+            }
+            for (int i = 0; i < 7; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    decodedStr += matrix[j, i];
+                }
+            }
+            Console.WriteLine(codedStr);
+            Console.WriteLine(decodedStr);
+ */
+/*
+ 
             int coordI_1 = 0, coordJ_1 = 0;
             int coordI_2 = 0, coordJ_2 = 0;
             string ruAlph = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ ,";
@@ -150,15 +374,32 @@ namespace forPricticepart
                 decodedString += matrix[coordI_2, coordJ_1].ToString() + matrix[coordI_1, coordJ_2].ToString();
 
             }
-
-        }
-    }
-}
-
+ 
+ 
+ */
 
 
 
-/*using System;
+
+
+
+
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
 using System.Threading;
 
 namespace ConsoleApp1

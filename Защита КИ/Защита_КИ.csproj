@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,6 +52,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -82,6 +98,42 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="LR_10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LR_10.Designer.cs">
+      <DependentUpon>LR_10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LR_6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LR_6.Designer.cs">
+      <DependentUpon>LR_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LR_7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LR_7.Designer.cs">
+      <DependentUpon>LR_7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LR_9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LR_9.Designer.cs">
+      <DependentUpon>LR_9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LR_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LR_4.Designer.cs">
+      <DependentUpon>LR_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LR_5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LR_5.Designer.cs">
+      <DependentUpon>LR_5.cs</DependentUpon>
+    </Compile>
     <Compile Include="ЛР_2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +160,24 @@
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LR_10.resx">
+      <DependentUpon>LR_10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LR_4.resx">
+      <DependentUpon>LR_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LR_5.resx">
+      <DependentUpon>LR_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LR_6.resx">
+      <DependentUpon>LR_6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LR_7.resx">
+      <DependentUpon>LR_7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LR_9.resx">
+      <DependentUpon>LR_9.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -118,6 +188,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ЛР_2.resx">
+      <DependentUpon>ЛР_2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ЛР_3.resx">
       <DependentUpon>ЛР_3.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +250,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\maxresdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
